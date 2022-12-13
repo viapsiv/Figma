@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>OptimusTech</title>
+<link rel="icon" type="image/x-icon" href="worldwide.png">
+<style>
+/* font-family: 'Inter', sans-serif; */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+
+html {
+font-size: 62.5%;
+}
+
+body {
+background-color: #fff;
+font-family: 'Inter', sans-serif;
+width: 100%;
+}
+
+.container {
+margin-inline: auto;
+width: min(90%,150rem);
+}
+
+nav {
+padding-top: 1.6rem;
+padding-bottom: 1.6rem;
+}
+
+.menu-icon {
+display: none;
+}
+
+.menu-links {
+display: none;
+}
+
+nav .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+nav .links a {
+font-size: 1.6rem;
+color:#667085;
+text-decoration: none;
+margin-right: 3.2rem;
+transition: all 0.4s ease;
+}
+
+nav .nav-links a:hover {
+color: #8E2424;
+}
+
+.right-links #enter {
+font-size: 1.6rem;
+color:#667085;
+text-decoration: none;
+margin-right: 2rem;
+transition: all 0.4s ease;
+}
+
+.right-links #enter:hover {
+color: #8E2424;
+}
+
+#signup {
+background:#8E2424;
+border: none;
+padding: 1rem 2rem;
+border-radius: 8px;
+transition: all 0.4s ease;
+}
+
+#signup:hover {
+background: #5d1414;
+}
+
+#signup a {
+font-family: 'Inter', sans-serif;
+font-size: 1.6rem;
+text-decoration: none;
+color: #fff;
+}
+
+header {
+text-align: center;
+padding: 96px 0;
+}
+
+header h1 {
+font-size: 4.8rem;
+margin-bottom: 24px;
+color:#101828;
+}
+
+header p {
+font-size: 2rem;
+color: #667085;
+display: inline-block;
+max-width: 80%;
+}
+
+.header_title-label--no-bg {
+font-weight: 600;
+color: #8E2424;
+font-size: 1.6rem;
+}
+
+.metricas_container {
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+gap: 1%;
+padding-bottom: 96px;
+}
+
+.metricas_container-item {
+min-height: 220px;
+flex-basis: 100%;
+padding: 12px;
+transition: all 0.2s ease-in;
+}
+
+.metricas_container-item:hover {
+background:#C3191908;
+border-radius: 8px;
+}
+
+.metricas_container-item h3 {
+font-size: 6rem;
+font-weight: 600;
+color:#8E2424;
+}
+
+.metricas_container-item_title {
+font-size: 1.8rem;
+font-weight: 500;
+color: #101828;
+margin: 16px 0;
+}
+
+.paragrafo-item {
+font-size: 1.6rem;
+font-weight: 400;
+color: #667085;
+}
+
+.header-title-label {
+font-size: 1.4rem;
+font-weight: 500;
+text-align: center;
+color: #8E2424;
+background:#C3191908;
+border-radius: 16px;
+padding: 8px 16px;
+display: block;
+margin: auto;
+width: fit-content;
+}
+
+h2 {
+font-size: 3.6rem;
+font-weight: 600;
+text-align: center;
+margin: 16px 0 24px 0;
+color: #101828;
+}
+
+.vagas p {
+font-size: 2rem;
+text-align: center;
+color:#667085;
+display: block;
+margin: auto;
+max-width: 80%;
+}
+
+.vagas img {
+max-width: 90%;
+display: block;
+margin: auto;
+padding: 5% 0 0 0;
+}
+
+.vagas--wrapper {
+padding: 0 20%;
+margin: 6.4rem 0 0 0;
+}
+
+.vagas h4 {
+font-size: 2rem;
+font-weight: 500;
+text-align: left;
+margin: 0 0 3.2rem 0;
+}
+
+.vagas_card {
+border: 1px solid #EAECF0;
+border-radius: 16px;
+padding: 24px 24px 28px 24px;
+margin-bottom: 2.4rem;
+}
+
+.vagas_card p {
+font-size: 1.8rem;
+font-weight: 500;
+text-align: left;
+color: #101828;
+margin: 0 0 3.2rem 0;
+display: block;
+}
+
+.vagas_card-infos {
+font-size: 1.6rem;
+font-weight: 500;
+color:#667085;
+display: inline-block;
+margin-right: 2.4rem;
+}
+
+/* Testimonial */
+
+.testimonials_card {
+background: #C3191908;
+border-radius: 16px;
+padding: 6.4rem;
+display: flex;
+flex-direction: column;
+row-gap: 3rem;
+margin: 7.2rem 0 7.2rem 0;
+}
+
+.testimonials_card-label {
+font-weight: 600;
+text-align: center;
+color: #8E2424;
+font-size: 1.4rem;
+display: block;
+
+}
+
+.testimonials_card p {
+font-size: 3.6rem;
+text-align: center;
+font-weight: 500;
+color: #101828;
+display: block;
+margin:auto;
+max-width: 80%;
+}
+
+.testimonials_card-author {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.testimonials_card-author img {
+margin-bottom: 1.6rem;
+}
+
+.testimonials_card-name {
+font-size: 1.6rem;
+font-weight: 500;
+color: #101828;
+line-height: 2.4rem;
+}
+
+.testimonials_card-cargo {
+font-size: 1.4rem;
+font-weight: 400;
+color:#667085;
+line-height: 2rem;
+}
+/* Footer */
+footer {
+background: #F9FAFB;
+padding: 9.6rem 0;
+}
+
+footer p {
+font-size: 2rem;
+font-weight: 400;
+text-align: center;
+color: #667085;
+}
+
+input#email {
+padding: 1.2rem 1.6rem;
+width: 36rem;
+border: 1px solid #D0D5DD;
+border-radius: 8px;
+outline: none;
+transition: border 0.4s ease;
+}
+
+input#email:focus {
+border: 1px solid #6e7785;
+}
+
+#submit {
+font-family: 'Inter', sans-serif;
+font-size: 1.6rem;
+font-weight: 500;
+color: #fff;
+background-color:#8E2424;
+border: none;
+padding: 1.2rem 2rem;
+border-radius: 8px;
+cursor: pointer;
+transition: all 0.4s ease;
+}
+
+#submit:hover {
+background: #5d1414;
+}
+
+form {
+display: flex;
+justify-content: center;
+gap: 1.6rem;
+margin: 4rem 0;
+}
+
+.credits {
+font-size: 1.6rem;
+font-weight: 400;
+color: #98A2B3;
+display: block;
+text-align: center;
+}
+
+/* Media queries */
+
+@media (max-width:830px) {
+html {
+font-size: 55%;
+}
+
+.menu-icon {
+display: block;
+background-color: transparent;
+border: none;
+cursor: pointer;
+}
+
+.icon-menu-hamburger {
+width: 4.6rem;
+}
+
+.open-menu {
+display: block;
+}
+
+.menu-links {
+background-color: #fafafa;
+border-top: solid 0.2rem #ececec;
+border-bottom: solid 0.2rem #ececec;
+}
+
+.menu-links a {
+display: block;
+font-size: 2rem;
+text-decoration: none;
+padding: 2.4rem 3.2rem;
+color: #101828;
+font-weight: 500;
+transition: 0.3s ease;
+}
+
+.menu-mobile-links a:hover {
+background-color: #8E2424;
+color: #fff;
+}
+
+.metricas_container {
+flex-direction: column;
+row-gap: 2.4rem;
+}
+
+.metricas_container-item {
+min-height: auto;
+width: 100%;
+}
+
+	.nav-links {
+display: none;
+}
+
+.right-links {
+display: none;
+}
+
+.vagas--wrapper {
+padding: 0 10%;
+}
+}
+
+@media (max-width:600px) {
+html {
+font-size: 52%;
+}
+
+input#email {
+width: 22rem;
+}
+
+.logo-empresa {
+width: 35%;
+}
+
+.vagas img {
+max-width: 100%;
+}
+
+.vagas--wrapper {
+padding: 0 0;
+}
+
+.testimonials_card p {
+font-size: 3rem;
+max-width: 100%;
+}
+}
+
+.logo{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 8px;
+width: 148px;
+height: 26.99px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.logo h1{
+width: 113px;
+height: 24px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 24px;
+/* identical to box height, or 133% */
+color: #3A404E;
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+</style>
+</head>
+<body>
+<nav>
+<div class="container">
+    <div class="logo">
+<img class="logo-empresa" src="worldwide.png" alt="OptimusTech Logo">
+<h1>OptimusTech</h1></div>
+	<div class="links">
+	<a href="/index.html">Home</a>
+	<a href="#">Produtos</a>
+	<a href="#">Recursos</a>
+	<a href="#">Sobre nós</a>
+</div>
+	<div class="right-links">
+	<a id="enter" href="#">Entrar</a>
+	<button id="signup" type="button"><a href="#">Cadastrar</a></button>
+    </div>
+    <button class="menu-icon" onclick="openMenu()">
+    <img class="icon-menu-hamburger" src="assets/menu_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+</button>
+</div>
+</nav>
+    <div class="menu-links">
+    <a href="/index.html">Home</a>
+	<a href="#">Produtos</a>
+	<a href="#">Recursos</a>
+	<a href="#">Sobre nós</a>
+</div>
+
+<header>
+	<div class="container">
+	<span class="header_title-label--no-bg">Sobre nós</span>
+	<h1>Por que somos diferentes?</h1>
+	<p>Nós focamos nos detalhes de tudo que fazemos. Tudo para ajudar as empresas de o mundo a se concentrarem naquilo que é realmente importante para elas.</p>
+</div>
+</header>
+    <main>
+	<section class="metricas">
+	<div class="container">
+    <div class="metricas_container">
+	<div class="metricas_container-item">
+	<h3>400+</h3>
+	<p class="metricas_container-item_title">Projetos concluídos</p>
+	<p class="paragrafo-item">Nós ajudamos a construir mais de 400 projetos incríveis.</p>
+</div>
+	<div class="metricas_container-item">
+	<h3>100+</h3>
+	<p class="metricas_container-item_title">Colaboradores</p>
+	<p class="paragrafo-item">Temos mais de 100 colaboradores no nosso time que se preocupam com nossos clientes.</p>
+</div>
+	<div class="metricas_container-item">
+	<h3>20k</h3>
+	<p class="metricas_container-item_title">Downloads</p>
+	<p class="paragrafo-item">Nossos projetos que estão disponíveis em lojas já foram baixados mais de 20.000 vezes.</p>
+</div>
+	<div class="metricas_container-item">
+	<h3>500+</h3>
+	<p class="metricas_container-item_title">Reviews 5 estrelas</p>
+	<p class="paragrafo-item">Estamos orgulhosos de contar com mais de 500 reviews 5 estrelas em nossos produtos.</p>
+</div>
+</div>
+</div>
+</section>
+	<section class="vagas">
+	<div class="container">
+	<span class="header-title-label">Vagas abertas!</span>
+	<h2>Estamos procurando por talentos</h2>
+	<p>Somos uma equipe 100% remota com pessoas do Brasil inteiro.</p>
+	<img src="Image.jpg" alt="Equipe sorrindo usando notebook em cima de uma mesa reunidos">
+	<div class="vagas--wrapper">
+	<h4>Design</h4>
+	<div class="vagas_card">
+	<p>Product Designer</p>
+	<span class="vagas_card-infos">Full-time</span>
+	<span class="vagas_card-infos">Faixa salarial: R$7.000</span>
+</div>
+	<div class="vagas_card">
+	<p>UX Designer</p>
+	<span class="vagas_card-infos">Full-time</span>
+	<span class="vagas_card-infos">Faixa salarial: R$6.000</span>
+</div>
+</div>
+	<div class="vagas--wrapper">
+	<h4>Desenvolvimento de Software</h4>
+	<div class="vagas_card">
+	<p>Desenvolvedor(a) iOS</p>
+	<span class="vagas_card-infos">Full-time</span>
+	<span class="vagas_card-infos">Faixa salarial: R$8.000</span>
+</div>
+	<div class="vagas_card">
+	<p>Desenvolvedor(a) Front-end</p>
+	<span class="vagas_card-infos">Full-time</span>
+	<span class="vagas_card-infos">Faixa salarial: R$7.000</span>
+</div>
+	<div class="vagas_card">
+	<p>Desenvolvedor(a) Back-end</p>
+	<span class="vagas_card-infos">Full-time</span>
+	<span class="vagas_card-infos">Faixa salarial: R$8.000</span>
+</div>
+</div>
+</div>
+</section>
+	<section class="testimonials">
+	<div class="container">
+	<div class="testimonials_card">
+	<span class="testimonials_card-label">Veja o que nossos colaboradores falam sobre nós</span>
+	<p>OptimusTech se importa com a saúde dos seus colaboradores e sempre procura nos dar todo tipo de auxílio possível.</p>
+	<div class="testimonials_card-author">
+	<img src="Avatar.jpg" alt="Avatar de uma mulher rindo usando um notebook">
+	<span class="testimonials_card-name">Júlia Castro</span>
+	<span class="testimonials_card-cargo">Desenvolvedora Web</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+	<footer>
+	<div class="container">
+	<h2>Acompanhe as nossas oportunidades</h2>
+	<p>Seja o primeiro a saber quando novas vagas serão abertas!</p>
+	<form>
+	<input type="email" name="email" id="email" placeholder="Seu e-mail">
+	<button type="submit" id="submit">Cadastrar</button>
+</form>
+	<span class="credits">© 2022 OptimusTech. Todos os direitos reservados.</span>
+</div>
+</footer>
+		<script src="script.js"></script>
+</body>
+</html>
